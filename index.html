@@ -2,35 +2,31 @@
 <html>
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>2020專題作業練習</title>
-<link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-	crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-	integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-	crossorigin="anonymous"></script>
-<script
-	src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-	integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-	crossorigin="anonymous"></script>
-<script
-	src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-	integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-	crossorigin="anonymous"></script>
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-	
-<style>
-@media only screen and (max-width:768px) {
-	li button {
-		width: 100%;
-	}
-}
-</style>
-<script>
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>2020專題作業練習</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+		crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+
+	<style>
+		@media only screen and (max-width:768px) {
+			li button {
+				width: 100%;
+			}
+		}
+	</style>
+	<script>
 		/*function getData(SightName) {
 			var req = new XMLHttpRequest();
 			req.open('get', "/webapi/SightAPI.do?zone=" + SightName);
@@ -46,17 +42,17 @@
 					$("#response").html("");
 					var foo = "<div class='container-fluid'>";
 					for (var i = 0; i < data.length; i++) {
-						var html="";//沒有class=contaner就對了??(row和container間距大)//51行外面加class=card-group似乎會把card的width變成100%?
-						if(i%3==0){
-							if(i==0){
-								html+=`<div class='row'>`
+						var html = "";//沒有class=contaner就對了??(row和container間距大)//51行外面加class=card-group似乎會把card的width變成100%?
+						if (i % 3 == 0) {
+							if (i == 0) {
+								html += `<div class='row'>`
 							}
-							else{
-								html+=`</div><div class='row'>`
+							else {
+								html += `</div><div class='row'>`
 							}
 						}
 						html +=
-						`<div class="col-md-4">
+							`<div class="col-md-4">
 							<div class="card text-center border-primary">
 								<h5 class="card-header">${data[i].SightName}</h5>
 								<div class="card-body">
@@ -109,8 +105,7 @@
 		<input type="submit" value="暖暖區" name="zone">
 	</form> -->
 	<nav class="navbar navbar-expand-md bg-dark navbar-dark">
-		<button class="navbar-toggler" type="button" data-toggle="collapse"
-			data-target="#collapsibleNavbar">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="collapsibleNavbar">
@@ -129,9 +124,8 @@
 						class="btn btn-outline-info text-white">安樂區</button></li>
 				<li class="nav-item"><button onclick="getData('暖暖區')"
 						class="btn btn-outline-info text-white">暖暖區</button></li>
-				<li class="nav-item"><button class="btn btn-primary"
-						type="button" data-toggle="collapse" data-target=".multi-collapse"
-						aria-expanded="false">一鍵全開</button></li>
+				<li class="nav-item"><button class="btn btn-primary" type="button" data-toggle="collapse"
+						data-target=".multi-collapse" aria-expanded="false">一鍵全開</button></li>
 			</ul>
 		</div>
 	</nav>
